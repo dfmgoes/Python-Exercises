@@ -1,0 +1,181 @@
+- Chapter 2: Flow Control
+1. Odd or Even: Write a program that asks the user for a number. Print "Odd" if the number is odd and "Even" if the number is even.
+number = int(input('Choose a number'))
+
+if number % 2 == 0:
+  print('Even number')
+else:
+  print('Odd number')
+1. Grade Calculator: Ask the user for their test score, and print out a grade (A, B, C, D, or F) based on the following scale:
+    - 90-100: A
+    - 80-89: B
+    - 70-79: C
+    - 60-69: D
+    - Below 60: F
+    grade = int(input('What is your grade?'))
+    
+    if grade >= 90:
+        print("A")
+    elif grade >= 80:
+        print("B")
+    elif grade >= 70:
+        print("C")
+    elif grade >= 60:
+        print("D")
+    elif grade < 60:
+        print("F")
+
+2. Simple Password Checker: Create a password-checking program. Ask the user to enter a password, and then check it against a predefined password (e.g., "python123"). If the password is correct, print "Access granted"; otherwise, print "Access denied."
+password = input('What is your password?')
+
+if password == 'jorginhodelas23':
+    print(' ora bem ')
+else:
+    print('ora mal')
+1. Multiples of Three: Write a program that prints all numbers from 1 to 50 that are multiples of three.
+for number in range(1,50):
+    if number % 3 == 0:
+        print(number)
+
+
+TRY EXCEPT EXERCISES: 
+
+
+Exercise 1: Safe Division
+Write a program that:
+1. Asks the user to enter two numbers.
+2. Tries to divide the first number by the second.
+3. If there’s a ZeroDivisionError (dividing by zero), print "You can’t divide by zero!"
+4. If there’s a ValueError (if the input isn’t a number), print "Please enter valid numbers."
+5. If the division is successful, print the result.
+
+try:
+    
+    num1 = int(input('Number one: '))
+    num2 = int(input('Number two: '))
+    
+    result = num1 / num2
+    print('Result:', result)
+    
+except ValueError:
+    print('Enter a valid number.')
+
+except ZeroDivisionError:
+    print('Unable to divide by zero.')
+
+Exercise 2: Convert Temperature
+Write a program that:
+1. Prompts the user to enter a temperature in Fahrenheit.
+2. Attempts to convert the input into a float.
+3. If there’s a ValueError, print "Please enter a valid number."
+4. If the input is valid, convert it to Celsius using the formula: Celsius=(Fahrenheit−32)×59\text{Celsius} = (\text{Fahrenheit} - 32) \times \frac{5}{9}Celsius=(Fahrenheit−32)×95​
+5. Print the result in Celsius.
+try:
+    temp = input('Temp in F: ')
+    tempF = float(temp)
+    result = (tempF - 32) * (5/9)
+    intresult = int(result)
+
+    print('Temp in Celsius:', intresult)
+
+except ValueError:
+    print('Not a valid number')
+
+# ChatGPT recommendation:
+
+# print('Temp in Celsius:', round(result, 2)) 
+# 
+# this rounds  the result variable (float) and keeps it at second decimal place
+
+Exercise 3: File Reader
+Write a program that:
+1. Asks the user for a filename.
+2. Tries to open and read the file.
+3. If the file doesn’t exist, catch the FileNotFoundError and print "File not found."
+4. If the file opens successfully, print its contents.
+
+try: 
+    fileq = input('What is the path for the file? ' )
+    file = open(fileq, 'r')
+    content = file.read()
+    print('There are the results of the file:', content)
+    file.close()
+
+except FileNotFoundError:
+    print('File does not exist')
+
+
+
+# try: 
+#     fileq = input('What is the path for the file? ')
+#     with open(fileq, 'r') as file: # as file - means that it will open it as this variable
+#         content = file.read()
+#         print('There are the results of the file:', content)
+
+# except FileNotFoundError:
+#     print('File does not exist')
+
+# Using "with" to open a file is more Pythonic, as it automatically closes the file when 
+# the block exits, even if an error occurs. This makes the code cleaner and safer.
+
+
+
+Exercise 4: List Indexing
+Write a program that:
+1. Creates a list, such as [10, 20, 30, 40, 50].
+2. Asks the user to enter an index to access.
+3. Tries to retrieve the element at that index.
+4. If there’s an IndexError (index out of range), print "Index is out of range."
+5. If there’s a ValueError (if the input isn’t a number), print "Please enter a valid index."
+6. If the index is valid, print the element.
+try: 
+    list1 = [0, 10, 15, 20, 30]
+
+    index = int(input('Enter the index you want from the list, from 0 to 4'))
+
+    print('Value of the requested index:', list1[index])
+
+except ValueError:
+    print('Provide valid numbers')
+
+except IndexError:
+    print('Index is out of range')
+Exercise 5: Age Checker
+Write a program that:
+1. Asks the user for their age.
+2. Tries to convert the input to an integer.
+3. If there’s a ValueError, print "Invalid input. Please enter a number."
+4. If the input is valid but the age is negative, raise a custom exception with the message "Age cannot be negative."
+5. If everything is correct, print a message based on the age, such as "You’re a minor" if under 18, and "You’re an adult" if 18 or older.
+try: 
+
+    age = int(input('What is your age?: '))
+
+    if 0 <= age <= 18: 
+        print('minor')
+    
+    elif age > 18:
+        print('Major')
+    
+    else:
+        print('Age cannot be negative')
+
+except ValueError:
+    print('Invalid Input. Please enter a number ')
+
+#ChatGPT recommends placing negative check first so it does not perform the other checks if true
+Exercise 6: Dictionary Lookup
+Write a program that:
+1. Creates a dictionary, such as grades = {"Alice": 85, "Bob": 92, "Charlie": 78}.
+2. Asks the user to enter a name.
+3. Tries to retrieve the grade for that name.
+4. If the name is not in the dictionary, catch the KeyError and print "Name not found."
+5. If the name is found, print the grade.
+grades = {"Alice": 85, "Bob": 93, "Charlie": 78}
+
+try:
+    name = input('What student?: ')
+    print('Result: ', grades[name])
+
+except KeyError: 
+    print('Name not found')
