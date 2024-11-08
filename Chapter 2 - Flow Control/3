@@ -1,0 +1,7 @@
+#1. Simple Password Checker: Create a password-checking program. Ask the user to enter a password, and then check it against a predefined password (e.g., "python123"). If the password is correct, print "Access granted"; otherwise, print "Access denied."
+password = input('What is your password?')
+
+if password == 'jorginhodelas23':
+    print(' ora bem ')
+else:
+    print('ora mal')

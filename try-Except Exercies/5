@@ -1,0 +1,24 @@
+# Exercise 5: Age Checker
+# Write a program that:
+# 1. Asks the user for their age.
+# 2. Tries to convert the input to an integer.
+# 3. If there’s a ValueError, print "Invalid input. Please enter a number."
+# 4. If the input is valid but the age is negative, raise a custom exception with the message "Age cannot be negative."
+# 5. If everything is correct, print a message based on the age, such as "You’re a minor" if under 18, and "You’re an adult" if 18 or older.
+try: 
+
+    age = int(input('What is your age?: '))
+
+    if 0 <= age <= 18: 
+        print('minor')
+    
+    elif age > 18:
+        print('Major')
+    
+    else:
+        print('Age cannot be negative')
+
+except ValueError:
+    print('Invalid Input. Please enter a number ')
+
+#ChatGPT recommends placing negative check first so it does not perform the other checks if true

@@ -1,0 +1,33 @@
+# Exercise 3: File Reader
+# Write a program that:
+# 1. Asks the user for a filename.
+# 2. Tries to open and read the file.
+# 3. If the file doesn’t exist, catch the FileNotFoundError and print "File not found."
+# 4. If the file opens successfully, print its contents.
+
+try: 
+    fileq = input('What is the path for the file? ' )
+    file = open(fileq, 'r')
+    content = file.read()
+    print('There are the results of the file:', content)
+    file.close()
+
+except FileNotFoundError:
+    print('File does not exist')
+
+
+
+# try: 
+#     fileq = input('What is the path for the file? ')
+#     with open(fileq, 'r') as file: # as file - means that it will open it as this variable
+#         content = file.read()
+#         print('There are the results of the file:', content)
+
+# except FileNotFoundError:
+#     print('File does not exist')
+
+# Using "with" to open a file is more Pythonic, as it automatically closes the file when 
+# the block exits, even if an error occurs. This makes the code cleaner and safer.
+
+
+

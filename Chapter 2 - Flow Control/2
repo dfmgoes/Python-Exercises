@@ -1,0 +1,19 @@
+# 1. Grade Calculator: Ask the user for their test score, and print out a grade (A, B, C, D, or F) based on the following scale:
+#     - 90-100: A
+#     - 80-89: B
+#     - 70-79: C
+#     - 60-69: D
+#     - Below 60: F
+
+    grade = int(input('What is your grade?'))
+    
+    if grade >= 90:
+        print("A")
+    elif grade >= 80:
+        print("B")
+    elif grade >= 70:
+        print("C")
+    elif grade >= 60:
+        print("D")
+    elif grade < 60:
+        print("F")

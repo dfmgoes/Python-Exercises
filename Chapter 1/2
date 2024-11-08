@@ -1,0 +1,6 @@
+#1. Personalized Greeting: Write a program that asks for the user's name and age. Then, print a message that says: #"Hello, [name]! You will be [age + 1] next year."
+
+name = input('What is your name?')
+age  = input('What is your age?')
+
+print('Hello ', name, ' you will be ', int(age) + 1, ' in one year.')

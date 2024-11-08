@@ -1,0 +1,22 @@
+# Exercise 1: Safe Division
+# Write a program that:
+# 1. Asks the user to enter two numbers.
+# 2. Tries to divide the first number by the second.
+# 3. If there’s a ZeroDivisionError (dividing by zero), print "You can’t divide by zero!"
+# 4. If there’s a ValueError (if the input isn’t a number), print "Please enter valid numbers."
+# 5. If the division is successful, print the result.
+
+try:
+    
+    num1 = int(input('Number one: '))
+    num2 = int(input('Number two: '))
+    
+    result = num1 / num2
+    print('Result:', result)
+    
+except ValueError:
+    print('Enter a valid number.')
+
+except ZeroDivisionError:
+    print('Unable to divide by zero.')
+

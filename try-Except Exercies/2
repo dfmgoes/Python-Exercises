@@ -1,0 +1,23 @@
+# Write a program that:
+# 1. Prompts the user to enter a temperature in Fahrenheit.
+# 2. Attempts to convert the input into a float.
+# 3. If there’s a ValueError, print "Please enter a valid number."
+# 4. If the input is valid, convert it to Celsius using the formula: Celsius=(Fahrenheit−32)×59\text{Celsius} = (\text{Fahrenheit} - 32) \times \frac{5}{9}Celsius=(Fahrenheit−32)×95​
+# 5. Print the result in Celsius.
+try:
+    temp = input('Temp in F: ')
+    tempF = float(temp)
+    result = (tempF - 32) * (5/9)
+    intresult = int(result)
+
+    print('Temp in Celsius:', intresult)
+
+except ValueError:
+    print('Not a valid number')
+
+# ChatGPT recommendation:
+
+# print('Temp in Celsius:', round(result, 2)) 
+# 
+# this rounds  the result variable (float) and keeps it at second decimal place
+

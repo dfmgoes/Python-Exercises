@@ -1,0 +1,20 @@
+# Exercise 4: List Indexing
+# Write a program that:
+# 1. Creates a list, such as [10, 20, 30, 40, 50].
+# 2. Asks the user to enter an index to access.
+# 3. Tries to retrieve the element at that index.
+# 4. If there’s an IndexError (index out of range), print "Index is out of range."
+# 5. If there’s a ValueError (if the input isn’t a number), print "Please enter a valid index."
+# 6. If the index is valid, print the element.
+try: 
+    list1 = [0, 10, 15, 20, 30]
+
+    index = int(input('Enter the index you want from the list, from 0 to 4'))
+
+    print('Value of the requested index:', list1[index])
+
+except ValueError:
+    print('Provide valid numbers')
+
+except IndexError:
+    print('Index is out of range')

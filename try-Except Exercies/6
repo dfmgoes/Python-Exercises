@@ -1,0 +1,15 @@
+# Exercise 6: Dictionary Lookup
+# Write a program that:
+# 1. Creates a dictionary, such as grades = {"Alice": 85, "Bob": 92, "Charlie": 78}.
+# 2. Asks the user to enter a name.
+# 3. Tries to retrieve the grade for that name.
+# 4. If the name is not in the dictionary, catch the KeyError and print "Name not found."
+# 5. If the name is found, print the grade.
+grades = {"Alice": 85, "Bob": 93, "Charlie": 78}
+
+try:
+    name = input('What student?: ')
+    print('Result: ', grades[name])
+
+except KeyError: 
+    print('Name not found')

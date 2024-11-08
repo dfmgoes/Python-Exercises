@@ -1,0 +1,7 @@
+#1. Favorite Animal: Create a script that asks the user for their favorite animal. If they respond with "cat" or "dog," print "That's a popular choice!" Otherwise, print "Nice choice!"
+animal = input('What is your favorite animal?')
+
+if animal == 'dog' or animal == 'cat':
+    print('That is a popular choice')
+else:
+    print('topzão irmão')

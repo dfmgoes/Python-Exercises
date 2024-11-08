@@ -1,0 +1,9 @@
+#1. Simple Calculator: Write a program that asks the user to input two numbers and then prints out their sum, difference, product, and quotient.
+
+number1 = input('What is the first number?')
+number2 = input('What is the second number?')
+
+print('Sum:', int(number1) + int(number2))
+print('Difference:', int(number1) - int(number2))
+print('Product:', int(number1) * int(number2))
+print('Quotient:', int(number1) / int(number2))
