@@ -1,0 +1,10 @@
+# Exercise 1: Define and Call Simple Functions
+# 1. Create a function called greet_user() that prints "Hello, welcome!". Call this function to see the output.
+# 2. Write a function greet_user(name) that takes one argument (name) and prints "Hello, [name]!". Call the function with different names to test it.
+
+
+def greet(name):
+    print('Hello,', name)
+
+greet('Jiorge')
+    

@@ -1,0 +1,96 @@
+# 10. Unit Converter
+# Create a program to convert units (e.g., kilometers to miles, Celsius to Fahrenheit).
+# Allow the user to select which type of conversion they want.
+
+def ctof(x):
+    f = (x * (9/5) + 32)
+    if f > 100:
+        print("HAWT HAWT HAWT Big Boy go back inside it's", round(f, 2),"ºF ")
+    else:
+        print('You are safe my guy, it is only', round(f, 2), 'ºF out there')
+
+def ftoc(x):
+    c = ((x - 32) * (5/9))
+    if c > 40:
+        print("HAWT HAWT HAWT Big Boy go back inside it's", round(c, 2),"ºC ")
+    else:
+        print('You are safe my guy, it is only', round(c, 2), 'ºC out there')
+   
+    
+def mtokm(x):
+    km = x * 1.60934
+    if km > 100:
+        print('Oh boy they do not make walks like these where i come from, it is', round(km, 2), "KMs !!!" )
+    else: 
+        print('Bring out the walking shoes, big boy. It is only', round(km, 2), 'KMs !!')
+
+def kmtom(x):
+    m = x / 0.621371
+    if m > 100:
+        print('Oh boy they do not make walks like these where i come from, it is', round(m, 2), "Ms !!!" )
+    else: 
+        print('Bring out the walking shoes, big boy. It is only', round(m, 2), 'Ms !!')
+
+print('Welcome to the fantastic European converter, where you can make all your American delusions come true!')
+
+try: 
+    convtype = int(input('What type of conversion would you like to do?\n'
+                '1. C to F\n'
+                '2. F to C\n'
+                '3. KM to Miles\n'
+                '4. Miles to KM\n'
+                'Choose option 1-4: '))
+
+    while convtype:
+        if convtype == 1: # C to F 
+            try:
+                convnum =  float(input("What's the value?\n"))
+                ctof(convnum)
+                break
+
+            except ValueError:
+                print("You're a big baboon\n")
+                continue
+
+        elif convtype == 2: # F to C
+            try:
+                convnum =  float(input("What's the value?\n"))
+                ftoc(convnum)
+                break
+
+            except ValueError:
+                print("You're a big baboon\n")
+                continue
+
+        elif convtype == 3: # KM to Meters
+            try:
+                convnum =  float(input("What's the value?\n"))
+                kmtom(convnum)
+                break
+
+            except ValueError:
+                print("You're a big baboon\n")
+                continue
+
+        elif convtype == 4: # M to KM
+            try:
+                convnum =  float(input("What's the value?\n"))
+                mtokm(convnum)
+                break
+
+            except ValueError:
+                print("You're a big baboon\n")
+                continue
+        else:
+            print("No banana for you until you follow instruction!!!!")
+            break
+
+except ValueError:
+    print('oh boy not like that')
+    
+
+
+
+
+
+

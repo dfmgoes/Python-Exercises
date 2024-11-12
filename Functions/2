@@ -1,0 +1,17 @@
+# Exercise 2: Function with Return Values
+# 1. Create a function called add_numbers(a, b) that takes two numbers and returns their sum. Call it with different pairs of numbers and print the result.
+# 2. Write a function square_number(num) that takes a number and returns its square. Call this function with a few examples.
+
+
+def add_numbers(a, b):
+    return  a + b
+
+
+
+def square_number(c):
+    return c ** 2
+
+
+print(add_numbers(19, 94))
+
+print(square_number(5))

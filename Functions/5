@@ -1,0 +1,24 @@
+#1. Define a function basic_math(a, b) that returns the sum, difference, product, and division of two numbers. Store the results in separate variables and print them.
+
+def basic_math(a, b):
+    sum = a + b
+    difference = a - b 
+    product = a * b
+    division = a / b
+    return "sum:", sum, "difference:", difference, "product:", product, "division:", division
+
+print(basic_math(5, 10))
+
+-----CHATGPT---------
+
+# def basic_math(a, b):
+#     return {
+#         "sum": a + b,
+#         "difference": a - b,
+#         "product": a * b,
+#         "division": a / b if b != 0 else "Undefined (division by zero)"
+#     }
+
+# # Using the function
+# result = basic_math(5, 10)
+# print(result)

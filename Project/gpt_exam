@@ -1,0 +1,33 @@
+import openai
+
+# Replace 'your-api-key-here' with your actual OpenAI API key
+openai.api_key = 'your-api-key-here'
+
+def get_gpt_response(prompt):
+    """Function to get a response from GPT."""
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=100,
+        temperature=0.7
+    )
+    return response['choices'][0]['message']['content']
+
+def ask_question():
+    """Function to take user input for a question and 4 possible answers."""
+    question = input("Enter your question: ")
+    answers = []
+    for i in range(1, 5):
+        answer = input(f"Enter answer option {i}: ")
+        answers.append(answer)
+    
+    # Create the prompt for ChatGPT
+    prompt = f"Question: {question}\nOptions:\n1) {answers[0]}\n2) {answers[1]}\n3) {answers[2]}\n4) {answers[3]}\nWhich is the correct answer?"
+    
+    # Get GPT's response
+    response = get_gpt_response(prompt)
+    print("\nGPT's response:", response)
+
+# Run the program
+if __name__ == "__main__":
+    ask_question()

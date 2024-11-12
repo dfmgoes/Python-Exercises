@@ -1,0 +1,21 @@
+# Exercise 4: Functions Using Conditional Statements
+# 1. Write a function grade_student(score) that returns "Pass" if the score is greater than or equal to 50, otherwise "Fail". Test it with various scores.
+# 2. Create a function check_age(age) that prints "You are an adult" if age is 18 or above, and "You are a minor" if below 18.
+
+def grade_student(score):
+    if 0 <= score <= 50:
+        return "Fail"
+    elif 50 <= score <= 100:
+        return "Pass"
+    else:
+        return "Not Valid"
+
+def check_age(age):
+    if age <= 18:
+        return "Minor"
+    else:
+        return "Major"
+    
+print(grade_student(73))
+
+print(check_age(19))
