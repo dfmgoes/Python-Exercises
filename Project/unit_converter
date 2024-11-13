@@ -15,8 +15,7 @@ def ftoc(x):
         print("HAWT HAWT HAWT Big Boy go back inside it's", round(c, 2),"ºC ")
     else:
         print('You are safe my guy, it is only', round(c, 2), 'ºC out there')
-   
-    
+       
 def mtokm(x):
     km = x * 1.60934
     if km > 100:
