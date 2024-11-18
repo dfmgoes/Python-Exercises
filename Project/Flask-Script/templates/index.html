@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Domain Search Tool</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('search_domains') }}">
+        <label for="domain">Enter domain to search:</label>
+        <input type="text" id="domain" name="domain" required>
+        <button type="submit">Add Domain</button>
+    </form>
+
+    <form method="GET" action="{{ url_for('run_search') }}">
+        <button type="submit">Run Search</button>
+    </form>
+</body>
+</html>
